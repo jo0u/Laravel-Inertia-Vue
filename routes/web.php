@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FrontedController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -11,6 +12,8 @@ Route::get('/about', [FrontedController::class,'about'])->name('aboutUs');
 Route::inertia('/contact', 'Frontend/Contect')->name('contactUs');
 
 
+
+Route::resource('posts', PostController::class);
 
 
 
